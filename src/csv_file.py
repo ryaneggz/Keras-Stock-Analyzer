@@ -9,7 +9,7 @@ import time
 ts = time.time()
 # print(int(ts))
 
-symbol = "AMD"
+symbol = "ABBV"
 
 conn = http.client.HTTPSConnection("apidojo-yahoo-finance-v1.p.rapidapi.com")
 
@@ -114,4 +114,4 @@ else:
             writer.writeheader()	
 			# For each price date in prices
             for i in range(1, price_length):
-                writer.writerow({"date" : date.fromtimestamp(price_date[i]), "open" : price_open[i], "high" : price_high[i], "low" : price_low[i], "close" : price_close[i], "volume" : price_volume[i], "adjclose" : price_adjclose[i]})
+                writer.writerow({"date" : date.fromtimestam p(price_date[i]), "open" : price_open[i], "high" : price_high[i], "low" : price_low[i], "close" : price_close[i], "volume" : price_volume[i], "adjclose" : price_adjclose[i]})
